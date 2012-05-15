@@ -36,6 +36,7 @@ define(['geom', 'gestures'], function (geom, gestures) {
   return {
     draw: function (state) {
       if (canvas && canvas.getContext) {
+        var offset = $(canvas).offset();
         var ctx = canvas.getContext("2d");
         window.ctx = ctx;
         if (! pts || pts.length === 0) {
@@ -56,16 +57,16 @@ define(['geom', 'gestures'], function (geom, gestures) {
           // With two points...
           // With just one point, nothing.
           var p0 = pts.shift();
-          var x = p0[0];
-          var y = p0[1];
+          var x = p0[0] - offset.left;
+          var y = p0[1] - offset.top;
           if (i+2 < len) {
             var p1 = pts[0];
-            var x2 = p1[0];
-            var y2 = p1[1];
+            var x2 = p1[0] - offset.left;
+            var y2 = p1[1] - offset.top;
 
             var p2 = pts[1];
-            var x3 = p2[0];
-            var y3 = p2[1];
+            var x3 = p2[0] - offset.left;
+            var y3 = p2[1] - offset.top;
 
             //var cntl = geom.getControlPoints(x3, y3, x2, y2, x, y, 0.3);
             var cntl = geom.getControlPoints(x, y, x2, y2, x3, y3, 0);

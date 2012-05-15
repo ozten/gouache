@@ -19,6 +19,7 @@ define(function () {
         }
       },
       add_point: function (x, y) {
+        console.log(x, y);
         pts.push([x, y]);
 
       },
