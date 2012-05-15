@@ -1,5 +1,5 @@
-git checkout gh-pages
-git merge master
+git checkout gh-pages &&  \
+git merge master && \
 echo "CACHE MANIFEST" > gouache.appcache
 echo "#build `date`" >> gouache.appcache
 echo "" >> gouache.appcache
