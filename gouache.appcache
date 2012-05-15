@@ -1,19 +1,13 @@
 CACHE MANIFEST
-#build Mon May 14 11:43:18 PDT 2012
-.
-./.DS_Store
+#build Mon May 14 22:24:47 PDT 2012
+
 ./404.html
-./crossdomain.xml
-./css
 ./css/style.css
 ./favicon.ico
-./img
-./js
 ./js/basic_brush.js
 ./js/geom.js
 ./js/gestures.js
 ./js/input.js
-./js/libs
 ./js/libs/base64.js
 ./js/libs/canvas2image.js
 ./js/libs/jquery-1.7.1.js
@@ -22,5 +16,6 @@ CACHE MANIFEST
 ./js/libs/require.js
 ./js/plugins.js
 ./js/script.js
+
 NETWORK:
 *
