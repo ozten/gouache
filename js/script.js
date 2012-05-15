@@ -16,7 +16,7 @@ require(['input', 'basic_brush'], function (input, basic_brush) {
       var img = Canvas2Image.saveAsJPEG(canvas, true);
       $('[role=main]').append(img);
       var css = $.extend({position: 'absolute', ":hover": "border: solid 1px red"},
-        $('#gouache').offset())
+        $('#gouache').offset());
       $('img', $('[role=main]')).css(css);
       $(this).text(label[1]);
     } else {
@@ -26,14 +26,16 @@ require(['input', 'basic_brush'], function (input, basic_brush) {
     show = ! show;
 
   });
+
+  $('#gouache').attr('width', $('#gouache').css('width'));
+  var height = window.innerHeight * 0.9;
+  $('#gouache').css('min-height', height);
+  $('#gouache').attr('height', height);
+  $('header').css('height', window.innerHeight * 0.1);
   input.init(state);
-  // http://scaledinnovation.com/analytics/splines/aboutSplines.html
 
   setInterval(function () {
     basic_brush.draw(state);
   }, 100);
 
 });
-
-
-
