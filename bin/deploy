@@ -1,0 +1,2 @@
+git commit -am "Deploying to gh-pages `date`"
+git push origin gh-pages
