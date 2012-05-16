@@ -26,15 +26,16 @@ require(['input', 'basic_brush'], function (input, basic_brush) {
     show = ! show;
 
   });
-var width = $('#gouache').css('width');
+  var width = $('#gouache').css('width');
   $('#gouache').attr('width', width);
-  var height = window.innerHeight * 0.9;
+  var height = window.innerHeight * 0.88;
   $('#gouache').css('min-height', height);
   $('#gouache').attr('height', height);
   $('header').css('height', window.innerHeight * 0.1);
-  // TODO Convert to photo has a black backgournd.. why?
-  $('#gouache').get(0).getContext('2d').fillRect(0, 0, width, height);
-
+  var c = $('#gouache').get(0).getContext('2d');
+  // Default Canvas Background Color
+  c.fillStyle = '#DDDDDD';
+  c.fillRect(0, 0, parseInt(width, 10), parseInt(height, 10));
   input.init(state);
 
   setInterval(function () {

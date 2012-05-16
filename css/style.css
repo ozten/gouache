@@ -218,49 +218,44 @@ td { vertical-align: top; }
    Author:
    ========================================================================== */
 
-
-
-code {
-  position: absolute;
-  top: 0px;
-  left: 360px; /* 220px */
-  font-size: 12px;
-  line-height: 1.0;
-  margin-top: 0px;
-  padding-top: 0px;
-}
+/* Structure */
 body {
-  position: relative;
+  overflow: hidden;
 }
 div[role=main] {
-  background-color: red;
-  margin: 0px;
-  padding: 0px;
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  width: 100%;
-  height: 100%;
+}
+header {
+  z-index: 1;
+  /* max-height via JS */
+}
+navigation, .toolbar, .tools {
+
+}
+canvas {
+  margin-left: 1%;
+  margin-top: 0%;
+  width: 98%;
+  /* height via JS */
+}
+
+/* Look and Feel */
+body {
+  background-color: rgb(192, 192, 192);
+}
+
+body {
+  /* position: relative; */
 }
 
 canvas {
-  display: block;
-  margin-left: 5%;
-  margin-top: 5%;
-  width: 90%;
-  /* height via JS */
+  border: solid 1px black;
 }
 
 
 navigation, .toolbar, .tools {
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  background-color: rgba(205, 205, 250, 0.8);
+  /* background-color: rgba(205, 205, 250, 0.8); */
 }
-header {
-  z-index: 1;
-}
+
 .tools {
   display: none;
 }
@@ -276,9 +271,17 @@ header {
 }
 header ul li { margin-left: 10px;}
 
-
+/* debugging thing */
 #debug { display: none;}
-
+code {
+  position: absolute;
+  top: 0px;
+  left: 360px; /* 220px */
+  font-size: 12px;
+  line-height: 1.0;
+  margin-top: 0px;
+  padding-top: 0px;
+}
 
 
 
