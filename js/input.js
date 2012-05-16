@@ -63,7 +63,7 @@ define(['gestures'], function (gestures) {
                 msg += "targetTouches[0].layerX=" + o.targetTouches[0].layerX + '\n';
                 msg += "touches[0].layerX=" + o.touches[0].layerX + '\n';
 
-                d(msg);
+                //d(msg);
               } catch (e) {
                 d(e.toString());
               }
@@ -101,7 +101,7 @@ define(['gestures'], function (gestures) {
             //gestures.add_point(e.clientX, e.clientY);
             //d(', [' + e.clientX + ', ' + e.clientY + ']');
             gestures.add_point(e.originalEvent.layerX , e.originalEvent.layerY);
-            d(', [' + (e.originalEvent.layerX) + ', ' + e.originalEvent.layerY + ']');
+            //d(', [' + (e.originalEvent.layerX) + ', ' + e.originalEvent.layerY + ']');
             //gestures.add_point(e.pageX, e.pageY);
             //d(', [' + e.pageX + ', ' + e.pageY + ']');
 
