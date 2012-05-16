@@ -1,4 +1,4 @@
-define(['geom', 'gestures'], function (geom, gestures) {
+define(['geom', 'gestures', 'palette'], function (geom, gestures, palette) {
   "use strict";
 
 
@@ -22,7 +22,9 @@ define(['geom', 'gestures'], function (geom, gestures) {
       e.preventDefault();
       c.lineCap = 'round';
       c.lineWidth = 30;
-      c.strokeStyle = 'rgba(150, 255, 150, 0.5)';
+    });
+    $('input[class=color]').bind('color_choosen', function (e, r, g, b) {
+      c.strokeStyle = 'rgba(' + r + ', ' + g + ', ' + b + ' , 0.8)';
     });
 
 

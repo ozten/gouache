@@ -1,3 +1,4 @@
+rm gouache.appcache
 git checkout gh-pages &&  \
 git merge master && \
 echo "CACHE MANIFEST" > gouache.appcache
