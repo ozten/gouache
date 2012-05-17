@@ -21,10 +21,13 @@ define(['geom', 'gestures', 'palette'], function (geom, gestures, palette) {
     $('#choose-wc-brush-menu').click(function (e) {
       e.preventDefault();
       c.lineCap = 'round';
-      c.lineWidth = 30;
     });
     $('input[class=color]').bind('color_choosen', function (e, r, g, b) {
       c.strokeStyle = 'rgba(' + r + ', ' + g + ', ' + b + ' , 0.8)';
+    });
+    $('input[type=range]').bind('change', function () {
+      c.lineWidth = $(this).val();
+      console.log(c.lineWidth);
     });
 
 
