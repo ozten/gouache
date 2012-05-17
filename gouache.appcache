@@ -1,16 +1,19 @@
 CACHE MANIFEST
-#build Tue May 15 22:22:22 PDT 2012
+#build Wed May 16 23:25:07 PDT 2012
 
 ./css/style.css
 ./favicon.ico
 ./js/basic_brush.js
+./js/brush_size.js
 ./js/geom.js
 ./js/gestures.js
+./js/imgur.js
 ./js/input.js
 ./js/libs/base64.js
 ./js/libs/canvas2image.js
 ./js/libs/jquery-1.7.1.js
 ./js/libs/jquery-1.7.1.min.js
+./js/libs/jscolors
 ./js/libs/jscolors/arrow.gif
 ./js/libs/jscolors/cross.gif
 ./js/libs/jscolors/demo.html
