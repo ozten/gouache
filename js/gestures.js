@@ -9,6 +9,8 @@ define(function () {
     return {
       start: function () {
         gesturing = true;
+        $('input[class=color]').get(0).color.hidePicker();
+        $('input[class=color]').get(0).blur();
       },
       // May be called more often than start
       end: function () {

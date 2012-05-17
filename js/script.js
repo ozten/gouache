@@ -1,7 +1,7 @@
 /* Author:
 
 */
-require(['input', 'basic_brush'], function (input, basic_brush) {
+require(['input', 'basic_brush', 'imgur'], function (input, basic_brush, imgur) {
   "use strict";
   var state = {
     capture: false
@@ -41,5 +41,8 @@ require(['input', 'basic_brush'], function (input, basic_brush) {
   setInterval(function () {
     basic_brush.draw(state);
   }, 100);
-
+  $('#publish-photo-menu').click(function () {
+    var t = new Date().getTime();
+    imgur.share('gouache_' + t + '.jpg', 'Gouache Sketch', 'Sketched with the world\'s shittiest painting tool\nhttp://gouache.me');
+  });
 });
