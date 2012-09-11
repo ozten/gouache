@@ -1,0 +1,9 @@
+git checkout gh-pages &&  \
+git merge master && \
+echo "CACHE MANIFEST" > gouache.appcache
+echo "#build `date`" >> gouache.appcache
+echo "" >> gouache.appcache
+find . | grep -v node_modules | grep -v '*~' | grep -v robots.txt | grep -v git | grep -v "./bin" | grep -v appcache | grep -v 'humans.txt' | grep -v 'index.html' | grep -v CNAME | grep -v './apple-touch-icon' | grep -E -v '^.$' >> gouache.appcache
+echo "" >> gouache.appcache
+echo "NETWORK:" >> gouache.appcache
+echo "*" >> gouache.appcache

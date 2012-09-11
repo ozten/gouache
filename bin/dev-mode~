@@ -1,0 +1,2 @@
+git checkout master && \
+python -m SimpleHTTPServer
